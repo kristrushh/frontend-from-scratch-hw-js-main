@@ -7,9 +7,11 @@
 // your code
 let sum = 0;
 let i = 1;
-while (i < 21) {
-  if (i % 2 != 0) {
-    sum = sum + i;
+
+if (i % 2 !== 0) {
+  while (i < 21) {
+    sum += i;
+    i++;
   }
 }
 console.log(sum)
