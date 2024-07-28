@@ -8,8 +8,8 @@
 let sum = 0;
 let i = 1;
 while (i < 21) {
-  if (i % 2 !== 0) {
-    sum += i
+  if (i % 2 != 0) {
+    sum = sum + i;
   }
   i++
 }
