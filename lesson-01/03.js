@@ -6,7 +6,7 @@
 let sum = 0;
 var num = 1;
 while (num < 20) {
-    if (num % 2 !== 0) {
+    if (num % 2 === 1) {
         sum += num;
     }
     num++;
