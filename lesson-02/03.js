@@ -5,5 +5,7 @@
  */
 
 const score = 70 // тестовое значение, можно изменять
-let grade
+let grade 
 // your code
+grade = (score < 50) ? "F" : (50 <= score < 70) ? "D" : (70 <= score <80) ? "C" : (80 <= score <99) ? "B" : "A"
+console.log(grade)
