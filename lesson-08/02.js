@@ -43,17 +43,24 @@ startButton.addEventListener('click', () => {
   // your code
 
 const timerId = setInterval(() => {
+  isTimerStarted = true
   countdownDisplay.textContent = counter > 0 ? counter-- : counter === 0 ? "🚀" : clearInterval(timerId)
 }, 1000)
+isTimerStarted = false
 })
 
 cancelButton.addEventListener('click', () => {
-  isTimerStarted = false
-  if (!isTimerStarted) {
-    countdownDisplay.textContent = "Отменено"
+  if (isTimerStarted === true) {
+    isTimerStarted = false
+    if (!isTimerStarted) {
+      countdownDisplay.textContent = "Отменено"
+    }
+    clearInterval(timerId)
   }
-  clearInterval(timerId)
+
 })
+
+
 
 // - При нажатии на кнопку "Отмена" таймер должен быть остановлен
 // - В элементе отображения счётчика (countdownDisplay) должно появиться сообщение "Отменено".
