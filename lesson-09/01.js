@@ -33,7 +33,7 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 // }
 
 const numbers = [1, 2, 3, 4, 5]
-const myFilter = function (array, callback) {
+const filter = function (array, callback) {
   let newArr = []
   for (let index = 0; index < array.length; i++) {
     if (callback(element, index)) {
@@ -43,7 +43,7 @@ const myFilter = function (array, callback) {
 }
 
 const callback = function (element, index) {
-  if (element % 2 === 0) {
+  if (element % 2 !== 0) {
     return index;
   }
 }
@@ -61,3 +61,7 @@ const callback = function (element, index) {
 Функция `filter` должна возвращать новый массив, содержащий только те элементы `array`, для которых `callback` возвращает `true`.
 */
 
+
+const filter = new Function(`${this.studentCode} \n return filter;`)();
+const result = filter([1, 2, 3, 4, 5], (element, index) => element % 2 !== 0);
+(0, local_cypress_1.expect)(result).to.deep.equal([1, 3, 5], 'Должен вернуть массив с нечетными числами');
