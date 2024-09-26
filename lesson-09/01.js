@@ -47,7 +47,7 @@ const callback = function (element, index) {
     return index;
   }
 }
-myFilter(numbers, callbackFunc)
+
 
 
 /*
