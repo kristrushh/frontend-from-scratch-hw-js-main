@@ -57,15 +57,13 @@ const filter = function (array, callback) {
   for (let index = 0; index < array.length; index++) {
     let element = array[index]
         if (callback(element, index)) {
-    newArr.push(element)
+    newArr.push(array[i])
     }
   }
   return newArr;
 }
 const cbFunc = function (element, index) {
   return element % 2 !== 0
-  console.log(index);
-  
 }
 
 const res = filter(numbers, cbFunc)
