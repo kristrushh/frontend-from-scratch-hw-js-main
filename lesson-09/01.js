@@ -98,3 +98,9 @@ Array.prototype.filter = function (callback) {
   //return the array
   return result
 }
+
+const callback = function (this[i], i) {
+  if (this[i] % 2 !== 0) {
+    return this[i];
+  }
+}
