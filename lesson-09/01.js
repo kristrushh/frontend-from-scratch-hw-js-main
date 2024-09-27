@@ -57,7 +57,7 @@ const filter = function (array, callback) {
   for (let index = 0; index < array.length; index++) {
     let element = array[index]
         if (callback(element, index)) {
-    newArr.push(array[i])
+    newArr.push(array[index])
     }
   }
   return newArr;
