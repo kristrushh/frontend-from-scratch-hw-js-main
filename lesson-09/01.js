@@ -29,13 +29,16 @@ const filter = function (array, callback) {
   }
   return newArr;
 }
-const callback = function (array[index], index) {
-  return array[index] % 2 !== 0
-}
-const res = filter(numbers, callback)
+// const callback = function (element, index) {
+//   return element % 2 !== 0
+// }
 
-
-const callback = function (array[i], i) {
-  return array[i] % 2 !== 0
+const cbFunc = function (element, index) {
+  if (element % 2 !== 0) {
+    return index
   }
+}
+// const res = filter(numbers, cbFunc)
+
+
 
