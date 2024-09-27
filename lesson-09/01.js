@@ -19,26 +19,53 @@ const oddNumbers = filter(numbers, (element, index) => {
 
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
-const numbers = [1, 2, 3, 4, 5]
-const filter = function (array, callback) {
-  let newArr = [];
-  for (let index = 0; index < array.length; index++) {
-    if (callback(array[index], index)) {
-    newArr.push(array[index])
-    }
-  }
-  return newArr;
-}
+
+
+// Array.prototype.filter = function (array, callback) {
+//   for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+    
+//   }
+// }
+// const numbers = [1, 2, 3, 4, 5]
+// const filter = function (array, callback) {
+//   let newArr = [];
+//   for (let index = 0; index < array.length; index++) {
+//     element = array[index]
+//     if (callback(element, index)) {
+//     newArr.push(array[index])
+//     }
+//   }
+//   return newArr;
+// }
 // const callback = function (element, index) {
 //   return element % 2 !== 0
 // }
 
-const cbFunc = function (element, index) {
-  if (element % 2 !== 0) {
-    return index
-  }
-}
+// const cbFunc = function (element, index) {
+//   if (element % 2 !== 0) {
+//     return index
+//   }
+// }
 // const res = filter(numbers, cbFunc)
 
 
 
+const numbers = [1, 2, 3, 4, 5]
+const filter = function (array, callback) {
+  let newArr = [];
+  for (let index = 0; index < array.length; index++) {
+    let element = array[index]
+        if (callback(element, index)) {
+    newArr.push(element)
+    }
+  }
+  return newArr;
+}
+const cbFunc = function (element, index) {
+  return element % 2 !== 0
+  console.log(index);
+  
+}
+
+const res = filter(numbers, cbFunc)
