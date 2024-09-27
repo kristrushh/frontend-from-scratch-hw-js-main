@@ -31,7 +31,8 @@ const arr = []
 const map = (array, callback) => {
   for (let index = 0; index < array.length; index++) {
     let element = array[index]
-    arr.push(newRes)
+      arr.push(callback(element, index))
+
   }
   return arr;
 }
